@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Share Your Feedback</h1>
+      <p>We value your opinion! Please take a moment to share your thoughts with us.</p>
+    </header>
+
+    <main>
+      <section class="feedback-form">
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Rate your experience (1-5)</label>
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5" required>
+              <label for="star5">5</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4">4</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3">3</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2">2</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1">1</label>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+      </section>
+
+      <section class="feedback-list hidden">
+        <h2>Recent Feedback</h2>
+        <div id="feedbackItems"></div>
+        <button id="newFeedbackBtn" class="secondary-btn">Add New Feedback</button>
+      </section>
+
+      <div id="successMessage" class="success-message hidden">
+        <h2>Thank You!</h2>
+        <p>Your feedback has been successfully submitted.</p>
+        <button id="viewFeedbackBtn" class="secondary-btn">View All Feedback</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>`
